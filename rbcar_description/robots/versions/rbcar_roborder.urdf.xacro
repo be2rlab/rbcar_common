@@ -81,11 +81,11 @@
 	</xacro:sensor_imu_hector>
 
 	<xacro:sensor_gps prefix="$(arg prefix)gps" parent="$(arg prefix)base_link" gps_latitude="$(arg gps_latitude)" gps_longitude="$(arg gps_longitude)" update_rate="20" >
-		<origin xyz="0.0 0 1.5" rpy="0 0 0"/>
+		<origin xyz="0.0 0 0.0" rpy="0 0 0"/>
 	</xacro:sensor_gps>
 
   <xacro:elevator parent="$(arg prefix)base_link" prefix="$(arg prefix)">
-		<origin xyz="0.0 0.0 0.6" rpy="0 0 0"/>
+		<origin xyz="0.8 0.0 0.6" rpy="0 0 0"/>
 	</xacro:elevator>
 
   <xacro:sensor_axis_q8641 prefix="$(arg prefix)front_ptz_camera" parent="$(arg prefix)elevator_link" far="300" near="0.08">
