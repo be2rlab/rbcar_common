@@ -6,7 +6,7 @@
   <arg name="odom_frame" default="$(arg prefix)odom"/>
   <arg name="base_frame" default="$(arg prefix)base_footprint"/>
   <arg name="odom_broadcast_tf" default="true"/>
-  <arg name="cmd_vel" default="cmd_vel"/>
+  <arg name="cmd_vel" default="$(arg prefix)cmd_vel"/>
   <arg name="launch_twist_mux" default="true"/>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
