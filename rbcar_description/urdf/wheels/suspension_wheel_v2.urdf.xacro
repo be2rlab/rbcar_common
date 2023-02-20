@@ -143,10 +143,10 @@
       <child link="${lr_prefix}_${fr_prefix}_wheel"/>
       <origin rpy="-${degrees_90} 0 0"/>
       <xacro:if value="${lr_reflect == 1}">
-      <axis xyz="0 0 -1"/>
+      <axis xyz="0 0 1"/>
       </xacro:if>
       <xacro:if value="${lr_reflect == -1}">
-      <axis xyz="0 0 1"/>
+      <axis xyz="0 0 -1"/>
       </xacro:if>
       <limit effort="${axle_eff_limit}" velocity="${axle_vel_limit}"/>
       <joint_properties damping="${wheel_joint_damping}" friction="${wheel_joint_friction}"/>
@@ -231,14 +231,14 @@
     <joint name="${lr_prefix}_steering_joint" type="revolute">
       <parent link="${lr_prefix}_steering_link"/>
       <child link="${lr_prefix}_${fr_prefix}_axle_carrier"/>
-
+        <axis xyz="0 0 -1"/>
       <xacro:if value="${lr_reflect == 1}"> <!-- this applies if we are setting the left wheel -->
-        <axis xyz="0 0 1"/>
+        <!-- <axis xyz="0 0 1"/> -->
         <limit lower="${-degrees_34}" upper="${degrees_45}"
              effort="${servo_stall_torque}" velocity="${servo_no_load_speed}"/>
         </xacro:if>
       <xacro:if value="${lr_reflect == -1}"> <!-- this applies if we are setting the right wheel -->
-        <axis xyz="0 0 -1"/>
+        <!-- <axis xyz="0 0 1"/> -->
         <limit lower="${-degrees_45}" upper="${degrees_34}"
              effort="${servo_stall_torque}" velocity="${servo_no_load_speed}"/>
       </xacro:if>
