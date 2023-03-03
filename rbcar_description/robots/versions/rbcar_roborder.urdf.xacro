@@ -97,7 +97,7 @@
   </xacro:sensor_rslidar_16>
 
   <xacro:sensor_teraranger_duo prefix="$(arg prefix)sonar" parent="$(arg prefix)base_link" min_angle="-0.02618" max_angle="0.02618">
-    <origin xyz="2.5 0 0" rpy="0 0 0"/> 
+    <origin xyz="2.3 0 0.2" rpy="0 0 0"/> 
   </xacro:sensor_teraranger_duo>
 
 <gazebo>
