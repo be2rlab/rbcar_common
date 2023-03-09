@@ -231,7 +231,7 @@
     <joint name="${lr_prefix}_steering_joint" type="revolute">
       <parent link="${lr_prefix}_steering_link"/>
       <child link="${lr_prefix}_${fr_prefix}_axle_carrier"/>
-        <axis xyz="0 0 -1"/>
+        <axis xyz="0 0 1"/>
       <xacro:if value="${lr_reflect == 1}"> <!-- this applies if we are setting the left wheel -->
         <!-- <axis xyz="0 0 1"/> -->
         <limit lower="${-degrees_34}" upper="${degrees_45}"
